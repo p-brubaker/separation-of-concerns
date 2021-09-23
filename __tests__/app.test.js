@@ -53,7 +53,19 @@ describe('03_separation-of-concerns-demo routes', () => {
             .then((res) => {
                 expect(res.body).toEqual({
                     id: '1',
-                    quantity: expect.any(Number),
+                    quantity: 12,
+                });
+            });
+    });
+
+    it('should patch an order by id', () => {
+        return request(app)
+            .patch('/api/v1/orders/1')
+            .send({ quantity: 1000 })
+            .then((res) => {
+                expect(res.body).toEqual({
+                    id: '1',
+                    quantity: 1000,
                 });
             });
     });
