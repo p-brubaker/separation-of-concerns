@@ -51,9 +51,6 @@
                     },
                     "while": {
                         "after": false
-                    },
-                    "catch": {
-                        "after": false
                     }
                 }
             }
